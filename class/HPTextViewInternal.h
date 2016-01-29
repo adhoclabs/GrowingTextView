@@ -27,11 +27,25 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_OPTIONS(NSUInteger, HPPastableMediaType) {
+    HPPastableMediaTypeNone        = 0,
+    HPPastableMediaTypePNG         = 1 << 0,
+    HPPastableMediaTypeJPEG        = 1 << 1,
+    HPPastableMediaTypeTIFF        = 1 << 2,
+    HPPastableMediaTypeGIF         = 1 << 3,
+    HPPastableMediaTypeMOV         = 1 << 4,
+    HPPastableMediaTypePassbook    = 1 << 5,
+    HPPastableMediaTypeImages      = HPPastableMediaTypePNG|HPPastableMediaTypeJPEG|HPPastableMediaTypeTIFF|HPPastableMediaTypeGIF,
+    HPPastableMediaTypeVideos      = HPPastableMediaTypeMOV,
+    HPPastableMediaTypeAll         = HPPastableMediaTypeImages|HPPastableMediaTypeMOV
+};
 
 @interface HPTextViewInternal : UITextView
 
 @property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) UIColor *placeholderColor;
 @property (nonatomic) BOOL displayPlaceHolder;
+
+@property (nonatomic) HPPastableMediaType pastableMediaTypes;
 
 @end
