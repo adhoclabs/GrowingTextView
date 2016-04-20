@@ -98,7 +98,7 @@ NSString *NSStringFromHPPastableMediaType(HPPastableMediaType type)
     [super setText:text];
     [self setScrollEnabled:originalValue];
     
-    self.pastableMediaTypes = HPPastableMediaTypePNG | HPPastableMediaTypeTIFF | HPPastableMediaTypeJPEG;
+    self.pastableMediaTypes = HPPastableMediaTypePNG | HPPastableMediaTypeTIFF | HPPastableMediaTypeJPEG | HPPastableMediaTypeGIF;
 }
 
 - (void)setScrollable:(BOOL)isScrollable
