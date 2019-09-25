@@ -321,12 +321,12 @@ NSString *NSStringFromHPPastableMediaType(HPPastableMediaType type)
     }
     else if ([pastedItem isKindOfClass:[NSString class]]) {
         self.placeholder = nil;
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:HPTextViewDidPasteItemNotification object:nil userInfo:pastedItem];
-        
+
         // Inserting the text fixes a UITextView bug whitch automatically scrolls to the bottom
         // and beyond scroll content size sometimes when the text is too long
         [self insertTextAtCaretRange:pastedItem];
+
+        [[NSNotificationCenter defaultCenter] postNotificationName:HPTextViewDidPasteItemNotification object:nil userInfo:pastedItem];
     }
 }
 
