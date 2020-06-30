@@ -114,6 +114,7 @@
 
     [self setPlaceholderColor:[UIColor lightGrayColor]];
     internalTextView.displayPlaceHolder = YES;
+    self.internalTextView.accessibilityId = @"textViewAccessibilityID";
 }
 
 -(CGSize)sizeThatFits:(CGSize)size
