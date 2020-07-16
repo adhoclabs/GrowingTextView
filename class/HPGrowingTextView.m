@@ -114,7 +114,7 @@
 
     [self setPlaceholderColor:[UIColor lightGrayColor]];
     internalTextView.displayPlaceHolder = YES;
-    self.internalTextView.accessibilityId = @"textMessageViewAccessibilityID";
+    self.internalTextView.accessibilityIdentifier = @"Burner_Message_Input_Field";
 }
 
 -(CGSize)sizeThatFits:(CGSize)size
